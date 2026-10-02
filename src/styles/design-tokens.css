@@ -1,0 +1,88 @@
+/* ==========================================================================
+   SMARTHIRE X - APPLE-INSPIRED DESIGN SYSTEM TOKENS
+   "Don't Just Apply. Become Job-Ready."
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Light Base & Cinematic Contrasts */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F7;
+  --bg-tertiary: #E8E8ED;
+  --bg-dark: #0B0B0D;
+  --bg-dark-surface: #141417;
+  --bg-dark-card: #1D1D22;
+  --bg-black: #000000;
+
+  /* Typography Colors */
+  --text-primary: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-tertiary: #86868B;
+  --text-dark-primary: #F5F5F7;
+  --text-dark-secondary: #A1A1A6;
+  --text-dark-muted: #6E6E73;
+
+  /* Premium Apple Accents */
+  --accent-blue: #0071E3;
+  --accent-blue-hover: #0077ED;
+  --accent-blue-glow: rgba(0, 113, 227, 0.28);
+  --accent-purple: #8656EF;
+  --accent-purple-glow: rgba(134, 86, 239, 0.25);
+  --accent-cyan: #06B6D4;
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
+  --accent-rose: #EF4444;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(180deg, #FFFFFF 0%, #F5F5F7 100%);
+  --grad-text-hero: linear-gradient(180deg, #1D1D1F 0%, #434344 100%);
+  --grad-text-dark: linear-gradient(180deg, #FFFFFF 0%, #A1A1A6 100%);
+  --grad-blue-purple: linear-gradient(135deg, #0071E3 0%, #8656EF 100%);
+  --grad-cyan-blue: linear-gradient(135deg, #06B6D4 0%, #0071E3 100%);
+  --grad-dark-card: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  /* Glassmorphism */
+  --glass-bg-light: rgba(255, 255, 255, 0.72);
+  --glass-border-light: rgba(0, 0, 0, 0.08);
+  --glass-bg-dark: rgba(20, 20, 24, 0.75);
+  --glass-border-dark: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(24px) saturate(180%);
+
+  /* Elevation Shadows */
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 12px 36px rgba(0, 0, 0, 0.10);
+  --shadow-float: 0 24px 60px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 40px var(--accent-blue-glow);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography Scale */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "Cascadia Code", "Fira Code", monospace;
+
+  --text-hero: clamp(3.2rem, 7vw, 6.5rem);
+  --text-section: clamp(2.2rem, 4.5vw, 3.8rem);
+  --text-headline: clamp(1.6rem, 3vw, 2.2rem);
+  --text-subhead: clamp(1.15rem, 1.8vw, 1.45rem);
+  --text-body: 1.05rem;
+  --text-caption: 0.88rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4.5rem;
+  --space-2xl: 7.5rem;
+
+  /* Transition timings */
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.35s var(--ease-apple);
+  --transition-fast: all 0.2s ease-out;
+}

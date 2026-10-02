@@ -1,0 +1,273 @@
+/* ==========================================================================
+   SMARTHIRE X - APPLE THEME & COMPONENT STYLES
+   ========================================================================== */
+
+@import './design-tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+/* Typography Helpers */
+.hero-title {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  background: var(--grad-text-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title-dark {
+  background: var(--grad-text-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  font-size: var(--text-section);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.section-subtitle {
+  font-size: var(--text-subhead);
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 680px;
+}
+
+/* Buttons - Apple Style */
+.btn-apple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.btn-apple:active {
+  transform: scale(0.97);
+}
+
+.btn-apple-primary {
+  background-color: var(--accent-blue);
+  color: #FFFFFF;
+}
+
+.btn-apple-primary:hover {
+  background-color: var(--accent-blue-hover);
+  box-shadow: 0 4px 18px var(--accent-blue-glow);
+}
+
+.btn-apple-secondary {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.btn-apple-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+.btn-apple-dark {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 600;
+}
+
+.btn-apple-dark:hover {
+  background-color: #E8E8ED;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+}
+
+.btn-apple-glass {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.btn-apple-glass:hover {
+  background-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.badge-blue {
+  background-color: rgba(0, 113, 227, 0.10);
+  color: var(--accent-blue);
+  border: 1px solid rgba(0, 113, 227, 0.20);
+}
+
+.badge-dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #A1A1A6;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.badge-success {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badge-warning {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: var(--accent-amber);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Glassmorphism Panels */
+.glass-nav {
+  background-color: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border-light);
+  transition: var(--transition-smooth);
+}
+
+.glass-nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-nav-dark {
+  background-color: var(--glass-bg-dark);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border-dark);
+}
+
+.apple-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.apple-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.apple-card-dark {
+  background: var(--bg-dark-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border-dark);
+  padding: var(--space-md);
+  color: #FFFFFF;
+  transition: var(--transition-smooth);
+}
+
+.apple-card-dark:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Cinematic Dark Section */
+.cinematic-section {
+  background-color: var(--bg-black);
+  color: #FFFFFF;
+  padding: var(--space-2xl) var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Readiness Orb Visualization */
+.readiness-orb-container {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.readiness-orb-center {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #2A2A35 0%, #0F0F14 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 50px rgba(0, 113, 227, 0.35), inset 0 0 25px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  color: #FFFFFF;
+}
+
+.satellite-badge {
+  position: absolute;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* Animated Ring SVG */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.8s ease;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* Layout Grid Utilities */
+.container-max {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
