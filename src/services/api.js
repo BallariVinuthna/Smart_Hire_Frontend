@@ -1,5 +1,5 @@
-// API client for SmartHire X Spring Boot REST backend
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
+  (typeof window !== 'undefined' && window.location.hostname.includes('localhost') ? 'http://localhost:8080/api' : '/api');
 
 const getHeaders = (isMultipart = false) => {
   const token = localStorage.getItem('smarthire_token');
