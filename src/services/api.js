@@ -1,5 +1,14 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-  (typeof window !== 'undefined' && window.location.hostname.includes('localhost') ? 'http://localhost:8080/api' : '/api');
+const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  if (typeof window !== 'undefined' && window.location.port === '5173') {
+    return 'http://localhost:8080/api';
+  }
+  return '/api';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const getHeaders = (isMultipart = false) => {
   const token = localStorage.getItem('smarthire_token');
