@@ -34,8 +34,19 @@ const handleResponse = async (response) => {
     localStorage.removeItem('smarthire_user');
   }
   if (!response.ok) {
-    const errorData = await response.json().catch(() => ({ message: response.statusText }));
-    throw new Error(errorData.message || 'API Request failed');
+    let message = response.statusText;
+    try {
+      const text = await response.text();
+      try {
+        const data = JSON.parse(text);
+        message = data.error || data.message || data.details || text;
+      } catch {
+        message = text || message;
+      }
+    } catch {
+      // ignore
+    }
+    throw new Error(message || 'API Request failed');
   }
   return response.json();
 };
