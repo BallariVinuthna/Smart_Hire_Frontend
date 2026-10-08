@@ -1,11 +1,16 @@
 const getApiBaseUrl = () => {
-  if (import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL;
+  let url = import.meta.env.VITE_API_BASE_URL;
+  if (!url) {
+    if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+      return 'http://localhost:8080/api';
+    }
+    url = 'https://smart-hire-backend-m5fs.onrender.com';
   }
-  if (typeof window !== 'undefined' && window.location.port === '5173') {
-    return 'http://localhost:8080/api';
+  url = url.replace(/\/+$/, '');
+  if (!url.endsWith('/api')) {
+    url = `${url}/api`;
   }
-  return '/api';
+  return url;
 };
 
 const API_BASE_URL = getApiBaseUrl();
